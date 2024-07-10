@@ -17,4 +17,8 @@ public  class Tree extends Entity {
 //    {
 //        this.cord = 19;
 //    } пример с статическим объектом
+    public Tree()
+    {
+
+    }
 }

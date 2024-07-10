@@ -19,6 +19,11 @@ public class Coordinates {
     public void setX(int x) {
         this.x = x;
     }
+    public Coordinates(int a,int b)
+    {
+        this.x = a;
+        this.y = b;
+    }
 
     private int x;
     private int y;

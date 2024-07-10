@@ -8,4 +8,8 @@ public class Herbivore extends Creature {
     {
       //Здесь выполняется ход на кол-во значений в поле speed_;
     }
+    public Herbivore()
+    {
+
+    }
 }

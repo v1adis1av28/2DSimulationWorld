@@ -7,6 +7,10 @@ public class Predator extends Creature {
 //    - Атаковать травоядное при это кол-во хп травоядного уменьшапется на силу атаки хищника,
 //    если значение хп жертвы опускатся до 0, травоядное исчезает
     private int strength_;//Поле силы хищника
+    public Predator()
+    {
+
+    }
     public int getStrength_()
     {
         return strength_;
