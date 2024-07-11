@@ -7,6 +7,7 @@ public class Herbivore extends Creature {
     public void makeMove()
     {
       //Здесь выполняется ход на кол-во значений в поле speed_;
+        // Как передвижение будет выполняться переход по результату BFS на кол-во итераций скорости
     }
     public Herbivore getValue()
     {

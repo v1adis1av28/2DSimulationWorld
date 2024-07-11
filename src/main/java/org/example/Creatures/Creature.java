@@ -8,13 +8,9 @@ public abstract class Creature extends Entity {
     // Имеет абстрактный метод makeMove() - Сделать ход. Далее от него наследуются другие классы
     // И каждый будет реализовывать по своему
     private int speed_;
-
+    private int hp_;
     public int getHp_() {
         return hp_;
-    }
-
-    public void setHp_(int hp_) {
-        this.hp_ = hp_;
     }
 
     public int getSpeed_() {
@@ -25,6 +21,10 @@ public abstract class Creature extends Entity {
         this.speed_ = speed_;
     }
 
-    private int hp_;
+    public Creature()
+    {
+        this.speed_ = 3;
+        this.hp_ = 100;
+    }
     abstract void makeMove();
 }

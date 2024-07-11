@@ -9,18 +9,16 @@ public class Predator extends Creature {
     private int strength_;//Поле силы хищника
     public Predator()
     {
-
+        super();
+        this.strength_ = 50;
     }
     public int getStrength_()
     {
         return strength_;
     }
-    public void setStrength_(int strength)
-    {
-        this.strength_ = strength;
-    }
      public void makeMove()
     {
-        //Здесь выполняется ход на кол-во значений в поле speed_;
+        //Здесь выполняется ход на кол-во значений в поле speed_;\
+        //Также выполняется проход по пути Point и если мы попали на точку c жертвой, то хаваем травоядное.
     }
 }
