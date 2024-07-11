@@ -11,56 +11,38 @@ import java.util.Objects;
 
 public class Renderer {
     private World world;
-    public World getWorld()
-    {
+
+    public World getWorld() {
         return world;
     }
-    public Renderer()
-    {
+
+    public Renderer() {
         this.world = new World();
     }
-    public void RenderWorld()
-    {
-        /*world = getWorld();
-        Map<Coordinates,Entity> map = world.getMap();
-        //Метод должен проходить по значениям m,n и Отрисовывать значение в данных кординатах
-        for(int i = 0;i<world.getN();i++)
-        {
-            for(int j = 0;j<world.getM();j++)
-            {
-                Coordinates coord = new Coordinates(i,j);
-                Entity obj = getWorld().GetValue(coord);
-                    if(obj instanceof Predator)
-                    {
-                        System.out.print("🦖 ");
-                    }
-                    else if (obj instanceof Herbivore)
-                    {
-                        System.out.print("🐰 ");
-                    }
-                    else if(obj instanceof Rock)
-                    {
-                        System.out.print("🏔️ ");
-                    }
-                    else if(obj instanceof Grass)
-                    {
-                        System.out.print("🌾 ");
-                    }
-                    else if(obj instanceof Tree)
-                    {
-                        System.out.print("🌲 ");
-                    }
-                    else
-                    {
-                        System.out.print("* ");
-                    }
+
+    public void RenderWorld() {
+        world = getWorld();
+        Map<Coordinates, Entity> map = world.getMap();
+        // Метод должен проходить по значениям m,n и Отрисовывать значение в данных кординатах
+        for (int i = 0; i < world.getN(); i++) {
+            for (int j = 0; j < world.getM(); j++) {
+                Coordinates coord = new Coordinates(i, j);
+                Entity obj = map.get(coord);
+                if (obj instanceof Predator) {
+                    System.out.print(" 🐺 ");
+                } else if (obj instanceof Herbivore) {
+                    System.out.print(" 🐰 ");
+                } else if (obj instanceof Rock) {
+                    System.out.print(" 🏔 ");
+                } else if (obj instanceof Grass) {
+                    System.out.print(" 🌾 ");
+                } else if (obj instanceof Tree) {
+                    System.out.print(" 🌲 ");
+                } else {
+                    System.out.print(" *  ");
                 }
-            System.out.println();
             }
-    */
-        //Obj постоянно null потому что он наследуется от entity и он приводит тип к энитит
-        //Надо сделать всем перегруженный метод для их типа данных и здесь уже его вытягивать
-        //Перегрузить метод GetValue()
+            System.out.println();
         }
     }
-
+}
