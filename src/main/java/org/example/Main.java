@@ -11,8 +11,8 @@ public class Main {
     public static void main(String[] args) {
        Renderer sm = new Renderer();
        sm.RenderWorld();
-        BFS b = new BFS();
-        System.out.println(b.BFS(new Coordinates(1,1),new Herbivore(),sm.getWorld()));
+        //BFS b = new BFS();
+       // System.out.println(b.BFS(new Coordinates(1,1),new Herbivore(),sm.getWorld()));
     }
 
 }// Х-хищник Т-травоядное т-трава к-камень Д-деревья

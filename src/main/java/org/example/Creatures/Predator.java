@@ -1,5 +1,7 @@
 package org.example.Creatures;
 
+import org.example.Coordinates;
+
 public class Predator extends Creature {
 //    В дополении имеет силу атаки(колл-во хп которое сносит)
 //    Может потратить ход на:
@@ -16,7 +18,7 @@ public class Predator extends Creature {
     {
         return strength_;
     }
-     public void makeMove()
+     public void makeMove(Coordinates coordinates)
     {
         //Здесь выполняется ход на кол-во значений в поле speed_;\
         //Также выполняется проход по пути Point и если мы попали на точку c жертвой, то хаваем травоядное.
