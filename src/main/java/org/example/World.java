@@ -10,7 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+
+
 class World {
+    private int WIDTH_OF_WORLD = 20;
+    private int HEIGHT_OF_WORLD = 20;
     private int N; // Длина поля
     private int M; // Ширина поля
 
@@ -21,8 +25,8 @@ class World {
     private Map<Coordinates, Entity> map; // Структура для хранения информации о мире
 
     public World() {
-        this.N = 20;
-        this.M = 20;
+        this.N = WIDTH_OF_WORLD;
+        this.M = HEIGHT_OF_WORLD;
         this.map = new HashMap<>();
         fill();
         /*

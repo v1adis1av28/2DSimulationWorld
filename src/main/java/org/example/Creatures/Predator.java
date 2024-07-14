@@ -8,19 +8,21 @@ public class Predator extends Creature {
 //    -Перемиститься к жертве(травоядному)
 //    - Атаковать травоядное при это кол-во хп травоядного уменьшапется на силу атаки хищника,
 //    если значение хп жертвы опускатся до 0, травоядное исчезает
-    private int strength_;//Поле силы хищника
+    private int speed_ =5;
     public Predator()
     {
         super();
-        this.strength_ = 50;
     }
-    public int getStrength_()
-    {
-        return strength_;
-    }
-     public void makeMove(Coordinates coordinates)
+     public void makeMove(boolean flag)
     {
         //Здесь выполняется ход на кол-во значений в поле speed_;\
         //Также выполняется проход по пути Point и если мы попали на точку c жертвой, то хаваем травоядное.
+        if(flag) {
+            healHp();
+        }
+        else
+        {
+            reduceHp();
+        }
     }
 }

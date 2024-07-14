@@ -25,11 +25,18 @@ public abstract class Creature extends Entity {
     {
         this.hp_ = hp_-15;
     }
-
+    public void healHp()
+    {
+        this.hp_ = getHp_() + 20;
+    }
     public Creature()
     {
         this.speed_ = 3;
         this.hp_ = 50;
     }
-    abstract void makeMove(Coordinates coordinates);
+    public boolean checkStatement()
+    {
+     return getHp_()<=0 ? false : true;
+    }
+    abstract void makeMove(boolean flag);
 }
