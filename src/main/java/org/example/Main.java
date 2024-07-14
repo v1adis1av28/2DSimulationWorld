@@ -12,14 +12,7 @@ public class Main {
        //Renderer sm = new Renderer();
        //sm.RenderWorld();
        Simulation sim = new Simulation();
-       for(int i = 0;i<3;i++)
-       {
-           sim.nextTurn();
-           System.out.println("------------------------------------------------");
-               System.out.println();
-           System.out.println();
-
-       }
+       sim.startSimulation();
 
     }
 

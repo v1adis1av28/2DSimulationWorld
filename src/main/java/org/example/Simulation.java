@@ -31,7 +31,44 @@
         }
 
         private void initActions() {
+            System.out.println("Старт симуляции:");
             render.RenderWorld();
+        }
+        private boolean isResourserEnd()
+        {
+            boolean grass = false, predator = false, herbivore = false;
+            for(Map.Entry<Coordinates,Entity> objct : render.getWorld().getMap().entrySet())
+            {
+                if(objct.getValue() instanceof Grass)
+                {
+                    grass = true;
+                }
+                else if(objct.getValue() instanceof Predator)
+                {
+                    predator = true;
+                } else if (objct.getValue() instanceof Herbivore) {
+                    herbivore = true;
+                }
+            }
+            return grass && herbivore && predator;
+        }
+        public void startSimulation()
+        {
+            while(true)
+            {
+                if(isResourserEnd())//Проверка есть ли все необходимые ресурсы на карте
+            {
+                nextTurn();
+                System.out.println();
+                System.out.println("------------------------------------");
+                System.out.println();
+            }
+            else
+            {
+                System.out.println("Симуляция окончена! Необходимые ресурсы для определенного существа были закончены!");
+                break;
+            }
+            }
         }
 
         private void turnActions() {
@@ -85,8 +122,6 @@
                     }
                 }
             }
-
-            // Apply the collected changes
             for (Coordinates coord : toRemove) {
                 map.remove(coord);
             }

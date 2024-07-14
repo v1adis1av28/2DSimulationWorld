@@ -21,7 +21,7 @@ public class BFS {
         int coordX = currentCoordinate.getX() + direct[0];
         int coordY = currentCoordinate.getY() + direct[1];
 
-        if (coordY >= 0 && coordX >= 0 && coordX < 20 && coordY < 20) { // Исправьте границы
+        if (coordY >= 0 && coordX >= 0 && coordX < 10 && coordY < 10) { // Исправьте границы
             set.add(new Point(new Coordinates(coordX, coordY), new Point(currentCoordinate)));
         }
     }

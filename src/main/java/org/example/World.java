@@ -13,8 +13,8 @@ import java.util.Random;
 
 
 class World {
-    private int WIDTH_OF_WORLD = 20;
-    private int HEIGHT_OF_WORLD = 20;
+    private int WIDTH_OF_WORLD = 10;
+    private int HEIGHT_OF_WORLD = 10;
     private int N; // Длина поля
     private int M; // Ширина поля
 
@@ -40,7 +40,7 @@ class World {
     }
     private void fill() {
         Random random = new Random();
-        int[] counts = {10, 12, 15, 15, 15}; // Количество хищников, травоядных, травы, камней, деревьев
+        int[] counts = {5, 7, 10, 10, 10}; // Количество хищников, травоядных, травы, камней, деревьев
         Entity[] entities = {new Predator(), new Herbivore(), new Grass(), new Rock(), new Tree()};
 
         for (int i = 0; i < counts.length; i++) {
