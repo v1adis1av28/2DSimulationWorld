@@ -10,16 +10,11 @@
 
     // Главный класс приложения
     public class Simulation {
-        private World world;
         private int stepsCount;
         private Renderer render;
         private BFS bfs;
-    
-        // nextTurn() - просимулировать и отрендерить один ход
-        // startSimulation() - запустить бесконечный цикл симуляции и рендеринга
-        // pauseSimulation() - приостановить бесконечный цикл симуляции и рендеринга
+
         public void nextTurn() {
-            // что-то происходит (насколько я понимаю травоядные идут к траве, хищники за травоядными)
             stepsCount++;
             turnActions();
         }
@@ -33,6 +28,7 @@
         private void initActions() {
             System.out.println("Старт симуляции:");
             render.RenderWorld();
+            System.out.println(" ----------------------------------------");
         }
         private boolean isResourserEnd()
         {

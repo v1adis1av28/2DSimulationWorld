@@ -5,9 +5,7 @@ import org.example.Creatures.Predator;
 import org.example.Resources.Grass;
 import org.example.Resources.Rock;
 import org.example.Resources.Tree;
-
 import java.util.Map;
-import java.util.Objects;
 
 public class Renderer {
     private World world;

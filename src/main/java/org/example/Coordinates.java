@@ -1,10 +1,8 @@
 package org.example;
-import java.util.Comparator;
-import java.util.Objects;
+
 //Вспомогательный класс структура
 // Нужен для хранения кординат на поле
-// будет использоваться в Map<?<T>,Coordinates>
-//Ключ-тип существа или ресурса, а значение это его координаты
+
 public class Coordinates implements Comparable<Coordinates> {
     private int x;
     private int y;
@@ -18,16 +16,8 @@ public class Coordinates implements Comparable<Coordinates> {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     @Override
@@ -60,11 +50,4 @@ public class Coordinates implements Comparable<Coordinates> {
                 '}';
     }
 
-    // Конструктор для компаратора, если нужен
-    public static Comparator<Coordinates> COMPARATOR = new Comparator<Coordinates>() {
-        @Override
-        public int compare(Coordinates c1, Coordinates c2) {
-            return c1.compareTo(c2);
-        }
-    };
 }

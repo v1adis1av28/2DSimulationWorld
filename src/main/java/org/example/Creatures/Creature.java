@@ -4,20 +4,14 @@ import org.example.Coordinates;
 import org.example.Entity;
 
 public abstract class Creature extends Entity {
-//    АБстрактный класс сущ-во должно иметь
-    // кол-во хп, скорость(кол-во клеток которое может пройти за 1 ход)
-    // Имеет абстрактный метод makeMove() - Сделать ход. Далее от него наследуются другие классы
-    // И каждый будет реализовывать по своему
     private int speed_;
     private int hp_;
     public int getHp_() {
         return hp_;
     }
-
     public int getSpeed_() {
         return speed_;
     }
-
     public void setSpeed_(int speed_) {
         this.speed_ = speed_;
     }
@@ -38,5 +32,12 @@ public abstract class Creature extends Entity {
     {
      return getHp_()<=0 ? false : true;
     }
-    abstract void makeMove(boolean flag);
+    public void makeMove(boolean flag)
+    {
+        if (flag) {
+            healHp();
+        } else {
+            reduceHp();
+        }
+    }
 }

@@ -5,12 +5,9 @@ import org.example.Creatures.Predator;
 import org.example.Resources.Grass;
 import org.example.Resources.Rock;
 import org.example.Resources.Tree;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-
-
 
 class World {
     private int WIDTH_OF_WORLD = 10;
@@ -29,14 +26,6 @@ class World {
         this.M = HEIGHT_OF_WORLD;
         this.map = new HashMap<>();
         fill();
-        /*
-          1 2 3 4
-        1 H * * *
-        2 * P R *
-        3 * T * *
-        4 * * * H
-        выводом должен быть 0,0)
-        **/
     }
     private void fill() {
         Random random = new Random();
@@ -53,7 +42,6 @@ class World {
             }
         }
     }
-
 
     public int getN() {
         return N;

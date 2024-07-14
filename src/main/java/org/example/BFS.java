@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
+
 public class BFS {
-    //Для класс нужна структура которая хранит в себе текущую координату, а также координату из которой она пришла
-    //нужен метод для поиска соседних pointов
+
    public Set<Point> getNeighbours(Coordinates currentCoordinate) {
     Set<Point> set = new HashSet<>();
     int directions[][] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
@@ -33,7 +33,7 @@ public class BFS {
     Point startNode = new Point(startCoordinates, null);
     Queue<Point> queue = new LinkedList<>();
     Map<Coordinates, Entity> map = world.getMap();
-    Set<Coordinates> visitedCoordinates = new HashSet<>(); // Используйте Set<Coordinates> для посещенных координат
+    Set<Coordinates> visitedCoordinates = new HashSet<>();
     queue.add(startNode);
 
     while (!queue.isEmpty()) {
@@ -65,16 +65,6 @@ public class BFS {
     }
     return startNode;
 }
-        /*
-          1 2 3 4
-        1 H T * *
-        2 R P R *
-        3 * T * *
-        4 * * * H
-        В такой ситуации когда хищник или травоядное "Окружен" то функция возвращает его местоположение
-        **/
-    
-    //ToDoo реализовать сам алгоритм поиска и затестить его
 }
 
 class Point {
@@ -84,11 +74,6 @@ class Point {
     public Point(Coordinates coordinates) {
         this.currentCoordinate = coordinates;
         this.prevPoint = null;
-    }
-
-    public Point(Point other) {
-        this.currentCoordinate = other.currentCoordinate;
-        this.prevPoint = other.prevPoint;
     }
 
     public Point getPrevPoint() {

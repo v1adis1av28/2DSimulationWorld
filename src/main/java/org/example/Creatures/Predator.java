@@ -13,16 +13,4 @@ public class Predator extends Creature {
     {
         super();
     }
-     public void makeMove(boolean flag)
-    {
-        //Здесь выполняется ход на кол-во значений в поле speed_;\
-        //Также выполняется проход по пути Point и если мы попали на точку c жертвой, то хаваем травоядное.
-        if(flag) {
-            healHp();
-        }
-        else
-        {
-            reduceHp();
-        }
-    }
 }
