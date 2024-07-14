@@ -14,10 +14,15 @@ An example of how the program works
 
 At each iteration, for all non-static entities, the program uses a breadth-first search algorithm, in which it searches for a path to its resource for each object and absorbs it. The simulation continues until one of the important resources is exhausted!
 1)
+
 ![image](https://github.com/user-attachments/assets/28c92ce8-e38a-48dd-a8bd-7e4698880b47)
+
 2)
+
 ![image](https://github.com/user-attachments/assets/b6b0809a-ec57-4e50-9c2a-1b177c3ee044)
+
 3)
+
 ![image](https://github.com/user-attachments/assets/0e555c1c-e05d-4c28-89d3-21d71dc99db1)
 
 ## Authors
